@@ -21,11 +21,13 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout repository
         uses: actions/checkout@v3
-      - name: Create new branch
-        run: |
-          git remote add deployer git@github.com:tomhjx/deployer.git
-          git fetch deployer
-          git checkout -b $GITHUB_REF_NAME deployer/main
-          git push deployer $GITHUB_REF_NAME
+        with:
+          repository: tomhjx/deployer
+          token: ${{ secrets.PERSONAL_TOKEN }}
+      - run: |
+          branch="docker/grpc/${{ GITHUB_REF_NAME }}"
+          git checkou -b $branch
+          git push --set-upstream origin $branch
+
 
 
