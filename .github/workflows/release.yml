@@ -25,7 +25,7 @@ jobs:
           repository: tomhjx/deployer
           token: ${{ secrets.PERSONAL_TOKEN }}
       - run: |
-          branch="docker/grpc/${{ GITHUB_REF_NAME }}"
+          branch="docker/grpc/$GITHUB_REF_NAME"
           git checkou -b $branch
           git push --set-upstream origin $branch
 
