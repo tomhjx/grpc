@@ -6,6 +6,6 @@ RUN apt-get update; \
     tar zxvf protobuf-all-21.12.tar.gz; \
     cd protobuf-21.12; \
     ./configure && make && make check && make install; \
-    protoc --version; \
-    go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.30.0; \
-    go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.54.0
+    protoc --version;
+    # go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.30.0; \
+    # go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.54.0
