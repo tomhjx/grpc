@@ -12,5 +12,5 @@ RUN apt-get update; \
     mv $TMP_PATH/bin/protoc /usr/local/bin/protoc; \
     protoc --version; \
     go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.30.0; \
-    go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.2
+    go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.3
 
