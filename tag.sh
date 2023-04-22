@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# tag.sh 0 > v1(+1).0.0
+# tag.sh 1 > v0.1(+1).0
+# tag.sh 3 > v0.0.1(+1)
+
 ver1i=2
 
 ver1s=(0 1 2)
